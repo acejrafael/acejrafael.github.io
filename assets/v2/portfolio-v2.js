@@ -84,7 +84,7 @@
       clientData.forEach((client) => {
         const card = document.createElement("a");
         card.className = "logo-card reveal is-visible";
-        card.href = `${caseBase}${slugifyFolder(client.folder)}/`;
+        card.href = `${caseBase}${slugifyFolder(client.folder)}/index.html`;
         const category = lang === "fr" ? client.fr : client.en;
         const visual = client.logo ? `<img src="${assetBase}client-logos/${client.logo}" alt="${client.name} logo">` : `<span class="initials">${initials(client.name)}</span>`;
         card.innerHTML = `${visual}<span>${client.name}<br>${category}</span>`;
