@@ -3,36 +3,42 @@
   const assetBase = root.dataset.assetBase || "assets/v2/";
   const caseBase = root.dataset.caseBase || "case-studies/";
   const clientData = [
-    { folder: "01 - Bike to the Beach", name: "Bike to the Beach", logo: "bike-to-the-beach.png", en: "Nonprofit / Events", fr: "OSBL / Evenements" },
-    { folder: "02 - Black Greeks", name: "Black Greeks", logo: "black-greeks.png", en: "Community / Culture", fr: "Communaute / Culture" },
-    { folder: "03 - The Black Wall Street", name: "The Black Wall Street", logo: "black-wall-street.png", en: "Commerce / Community", fr: "Commerce / Communaute" },
-    { folder: "04 - Creative Control Systems", name: "Creative Control Systems", logo: "creative-control-systems.jpg", en: "B2B / Systems", fr: "B2B / Systemes" },
-    { folder: "05 - Digital Delane", name: "Digital Delane", logo: "digital-delane.jpg", en: "Internal Agency", fr: "Agence interne" },
-    { folder: "06 - Dime Bags", name: "Dime Bags", logo: "dime-bags.jpg", en: "Consumer Brand", fr: "Marque grand public" },
-    { folder: "07 - Ding Tea", name: "Ding Tea", logo: "ding-tea.png", en: "Food / Franchise", fr: "Restauration / Franchise" },
-    { folder: "08 - Festival Noire", name: "Festival Noire", logo: "", en: "Internal Brand", fr: "Marque interne" },
-    { folder: "09 - Find Your Crew", name: "Find Your Crew", logo: "find-your-crew.webp", en: "App / Community", fr: "Application / Communaute" },
-    { folder: "10 - Functn", name: "Functn", logo: "functn.png", en: "Internal Product", fr: "Produit interne" },
-    { folder: "11 - Game Network", name: "Game Network", logo: "game-network.png", en: "Entertainment / App", fr: "Divertissement / Application" },
-    { folder: "12 - HUPNC Center", name: "HUPNC Center", logo: "", en: "Healthcare / Community", fr: "Sante / Communaute" },
-    { folder: "13 - Jazz Hands for Autism", name: "Jazz Hands for Autism", logo: "jazz-hands-for-autism.png", en: "Nonprofit / Arts", fr: "OSBL / Arts" },
-    { folder: "14 - Juntae Delane", name: "Juntae Delane", logo: "juntae-delane.jpg", en: "Personal Brand", fr: "Marque personnelle" },
-    { folder: "15 - Los Angeles Jaw Surgery", name: "Los Angeles Jaw Surgery", logo: "los-angeles-jaw-surgery.png", en: "Healthcare", fr: "Sante" },
-    { folder: "16 - Lamar Lyons", name: "Lamar Lyons", logo: "", en: "Personal Brand", fr: "Marque personnelle" },
-    { folder: "17 - Law School Expert", name: "Law School Expert", logo: "law-school-expert.png", en: "Education / Advisory", fr: "Education / Conseil" },
-    { folder: "18 - Live Younger", name: "Live Younger", logo: "live-younger.png", en: "Wellness", fr: "Bien-etre" },
-    { folder: "19 - National Recovery Associations (NRA)", name: "National Recovery Associations", logo: "", en: "Recovery / Services", fr: "Recouvrement / Services" },
-    { folder: "20 - Ostreon Inheritance", name: "Ostreon Inheritance", logo: "ostreon-inheritance.png", en: "Technology", fr: "Technologie" },
-    { folder: "21 - Prometheus", name: "Prometheus", logo: "", en: "Technology", fr: "Technologie" },
-    { folder: "22 - Ready to Publish Translations", name: "Ready to Publish Translations", logo: "ready-to-publish-translations.jpg", en: "Translation", fr: "Traduction" },
-    { folder: "23 - Sereen Hair", name: "Sereen Hair", logo: "sereen-hair.png", en: "Beauty / Ecommerce", fr: "Beaute / Ecommerce" },
-    { folder: "24 - Science on the Court (SOTC)", name: "Science on the Court", logo: "science-on-the-court.png", en: "Education / Sports", fr: "Education / Sport" },
-    { folder: "25 - SynthMinds (Practical AI)", name: "SynthMinds", logo: "synthminds.png", en: "AI / Product", fr: "IA / Produit" },
-    { folder: "26 - The Other Side Therapy", name: "The Other Side Therapy", logo: "the-other-side-therapy.png", en: "Healthcare", fr: "Sante" },
-    { folder: "27 - University of La Verne", name: "University of La Verne", logo: "", en: "Higher Education", fr: "Enseignement superieur" },
-    { folder: "28 - Upsurge CRM", name: "Upsurge CRM", logo: "upsurge-crm.png", en: "Internal Tool", fr: "Outil interne" },
-    { folder: "29 - Vidality", name: "Vidality", logo: "", en: "Health Tech / CRM", fr: "Health tech / CRM" },
-    { folder: "30 - WOW Media Networks", name: "WOW Media Networks", logo: "wow-media-networks.ico", en: "Media", fr: "Media" }
+    { folder: "01 - Bike to the Beach", name: "Bike to the Beach", logo: "bike-to-the-beach.png", en: "Nonprofit / Events", fr: "OSBL / Evenements", relationshipEn: "Digital Delane Client", relationshipFr: "Client Digital Delane" },
+    { folder: "02 - Black Greeks", name: "Black Greeks", logo: "black-greeks.png", en: "Community / Culture", fr: "Communaute / Culture", relationshipEn: "Digital Delane Client", relationshipFr: "Client Digital Delane" },
+    { folder: "03 - The Black Wall Street", name: "The Black Wall Street", logo: "black-wall-street.png", en: "Commerce / Community", fr: "Commerce / Communaute", relationshipEn: "Digital Delane Client", relationshipFr: "Client Digital Delane" },
+    { folder: "04 - Creative Control Systems", name: "Creative Control Systems", logo: "creative-control-systems.jpg", en: "B2B / Systems", fr: "B2B / Systemes", relationshipEn: "Digital Delane Client", relationshipFr: "Client Digital Delane" },
+    { folder: "05 - Digital Delane", name: "Digital Delane", logo: "digital-delane.jpg", en: "Internal Agency", fr: "Agence interne", relationshipEn: "Internal Brand", relationshipFr: "Marque interne" },
+    { folder: "06 - Dime Bags", name: "Dime Bags", logo: "dime-bags.jpg", en: "Consumer Brand", fr: "Marque grand public", relationshipEn: "Digital Delane Client", relationshipFr: "Client Digital Delane" },
+    { folder: "07 - Ding Tea", name: "Ding Tea", logo: "ding-tea.png", en: "Food / Franchise", fr: "Restauration / Franchise", relationshipEn: "Digital Delane Client", relationshipFr: "Client Digital Delane" },
+    { folder: "08 - Festival Noire", name: "Festival Noire", logo: "festival-noire.png", en: "Internal Brand", fr: "Marque interne", relationshipEn: "Internal Brand", relationshipFr: "Marque interne" },
+    { folder: "09 - Find Your Crew", name: "Find Your Crew", logo: "find-your-crew.webp", en: "App / Community", fr: "Application / Communaute", relationshipEn: "Digital Delane Client", relationshipFr: "Client Digital Delane" },
+    { folder: "10 - Functn", name: "Functn", logo: "functn.png", en: "Internal Product", fr: "Produit interne", relationshipEn: "Internal Brand", relationshipFr: "Marque interne" },
+    { folder: "11 - Game Network", name: "Game Network", logo: "game-network.png", en: "Entertainment / App", fr: "Divertissement / Application", relationshipEn: "Digital Delane Client", relationshipFr: "Client Digital Delane" },
+    { folder: "12 - HUPNC Center", name: "HUPNC Center", logo: "", en: "Healthcare / Community", fr: "Sante / Communaute", relationshipEn: "Digital Delane Client", relationshipFr: "Client Digital Delane" },
+    { folder: "13 - Jazz Hands for Autism", name: "Jazz Hands for Autism", logo: "jazz-hands-for-autism.png", en: "Nonprofit / Arts", fr: "OSBL / Arts", relationshipEn: "Digital Delane Client", relationshipFr: "Client Digital Delane" },
+    { folder: "14 - Juntae Delane", name: "Juntae Delane", logo: "juntae-delane.jpg", en: "Personal Brand", fr: "Marque personnelle", relationshipEn: "Internal Brand", relationshipFr: "Marque interne" },
+    { folder: "15 - Los Angeles Jaw Surgery", name: "Los Angeles Jaw Surgery", logo: "los-angeles-jaw-surgery.png", en: "Healthcare", fr: "Sante", relationshipEn: "Digital Delane Client", relationshipFr: "Client Digital Delane" },
+    { folder: "16 - Lamar Lyons", name: "Lamar Lyons", logo: "", en: "Personal Brand", fr: "Marque personnelle", relationshipEn: "Digital Delane Entity", relationshipFr: "Entite Digital Delane" },
+    { folder: "17 - Law School Expert", name: "Law School Expert", logo: "law-school-expert.png", en: "Education / Advisory", fr: "Education / Conseil", relationshipEn: "Digital Delane Client", relationshipFr: "Client Digital Delane" },
+    { folder: "18 - Live Younger", name: "Live Younger", logo: "live-younger.png", en: "Wellness", fr: "Bien-etre", relationshipEn: "Digital Delane Client", relationshipFr: "Client Digital Delane" },
+    { folder: "19 - National Recovery Associations (NRA)", name: "National Recovery Associations", logo: "national-recovery-associations.png", en: "Recovery / Services", fr: "Recouvrement / Services", relationshipEn: "Digital Delane Client", relationshipFr: "Client Digital Delane" },
+    { folder: "20 - Ostreon Inheritance", name: "Ostreon Inheritance", logo: "ostreon-inheritance.png", en: "Technology", fr: "Technologie", relationshipEn: "Digital Delane Client", relationshipFr: "Client Digital Delane" },
+    { folder: "21 - Prometheus", name: "Prometheus", logo: "prometheus.png", en: "Technology", fr: "Technologie", relationshipEn: "Digital Delane Client", relationshipFr: "Client Digital Delane" },
+    { folder: "22 - Ready to Publish Translations", name: "Ready to Publish Translations", logo: "ready-to-publish-translations.jpg", en: "Translation", fr: "Traduction", relationshipEn: "Digital Delane Client", relationshipFr: "Client Digital Delane" },
+    { folder: "23 - Sereen Hair", name: "Sereen Hair", logo: "sereen-hair.png", en: "Beauty / Ecommerce", fr: "Beaute / Ecommerce", relationshipEn: "Digital Delane Client", relationshipFr: "Client Digital Delane" },
+    { folder: "24 - Science on the Court (SOTC)", name: "Science on the Court", logo: "science-on-the-court.png", en: "Education / Sports", fr: "Education / Sport", relationshipEn: "Digital Delane Client", relationshipFr: "Client Digital Delane" },
+    { folder: "25 - SynthMinds (Practical AI)", name: "SynthMinds", logo: "synthminds.png", en: "AI / Product", fr: "IA / Produit", relationshipEn: "Digital Delane Client", relationshipFr: "Client Digital Delane" },
+    { folder: "26 - The Other Side Therapy", name: "The Other Side Therapy", logo: "the-other-side-therapy.png", en: "Healthcare", fr: "Sante", relationshipEn: "Digital Delane Client", relationshipFr: "Client Digital Delane" },
+    { folder: "27 - University of La Verne", name: "University of La Verne", logo: "university-of-la-verne.png", en: "Higher Education", fr: "Enseignement superieur", relationshipEn: "Digital Delane Client", relationshipFr: "Client Digital Delane" },
+    { folder: "28 - Upsurge CRM", name: "Upsurge CRM", logo: "upsurge-crm.png", en: "Internal Tool", fr: "Outil interne", relationshipEn: "Internal Brand", relationshipFr: "Marque interne" },
+    { folder: "29 - Vidality", name: "Vidality", logo: "vidality.png", en: "Health Tech / CRM", fr: "Health tech / CRM", relationshipEn: "Digital Delane Client", relationshipFr: "Client Digital Delane" },
+    { folder: "30 - WOW Media Networks", name: "WOW Media Networks", logo: "wow-media-networks.ico", en: "Media", fr: "Media", relationshipEn: "Digital Delane Client", relationshipFr: "Client Digital Delane" },
+    { folder: "31 - Industries San Miguel d Haiti ISM", name: "Industries San Miguel d Haiti (ISM)", logo: "industries-san-miguel-ism.png", en: "Beverage / Field Marketing", fr: "Boissons / Marketing terrain", relationshipEn: "Prior Employer", relationshipFr: "Employeur precedent" },
+    { folder: "32 - BigFox RD", name: "BigFox RD", logo: "bigfox-rd.svg", en: "Creative Agency / Marketing", fr: "Agence creative / Marketing", relationshipEn: "Prior Agency Experience", relationshipFr: "Experience agence precedente" },
+    { folder: "33 - GRAPNA", name: "GRAPNA", logo: "grapna.png", en: "Economic Empowerment / Small Business", fr: "Autonomisation economique / PME", relationshipEn: "Volunteer / Service", relationshipFr: "Benevolat / Service" },
+    { folder: "34 - 360 Smart Lingo", name: "360 Smart Lingo", logo: "360-smart-lingo.png", en: "Language Services / Interpretation", fr: "Services linguistiques / Interpretation", relationshipEn: "Prior Employer", relationshipFr: "Employeur precedent" },
+    { folder: "35 - Upwork", name: "Upwork", logo: "upwork.svg", en: "Freelance Consulting Platform", fr: "Plateforme de consultation freelance", relationshipEn: "Freelance Platform", relationshipFr: "Plateforme freelance" },
+    { folder: "36 - Toastmasters International", name: "Toastmasters International", logo: "toastmasters-international.png", en: "Leadership / Communication", fr: "Leadership / Communication", relationshipEn: "Leadership Development", relationshipFr: "Developpement du leadership" }
   ];
   const downloadPacks = [
     { en: "Core Client Template Kit", fr: "Kit principal de modeles client", count: 9, valueEn: "Discovery, kickoff, proposal, budget, reporting, and operations.", valueFr: "Decouverte, lancement, proposition, budget, reporting et operations.", zipEn: "Jax-Portfolio-Core-Client-Template-Kit-EN.zip", zipFr: "Portfolio-Jax-Kit-Principal-FR.zip" },
@@ -52,6 +58,9 @@
   }
   function initials(name) {
     return name.replace(/\([^)]*\)/g, "").split(/\s+/).filter(Boolean).slice(0, 2).map((part) => part[0]).join("").toUpperCase();
+  }
+  function relationshipLabel(client, lang) {
+    return lang === "fr" ? client.relationshipFr : client.relationshipEn;
   }
   function setTextLanguage(lang) {
     document.documentElement.lang = lang;
@@ -87,7 +96,8 @@
         card.href = `${caseBase}${slugifyFolder(client.folder)}/index.html`;
         const category = lang === "fr" ? client.fr : client.en;
         const visual = client.logo ? `<img src="${assetBase}client-logos/${client.logo}" alt="${client.name} logo">` : `<span class="initials">${initials(client.name)}</span>`;
-        card.innerHTML = `${visual}<span>${client.name}<br>${category}</span>`;
+        const relationship = relationshipLabel(client, lang);
+        card.innerHTML = `${visual}<span class="logo-copy"><strong>${client.name}</strong><span class="logo-category">${category}</span><span class="relationship-badge">${relationship}</span></span>`;
         container.appendChild(card);
       });
     });

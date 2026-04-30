@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="BigFox logo mark">
+  <rect width="512" height="512" rx="128" fill="#ffffff"/>
+  <circle cx="108" cy="122" r="38" fill="#f26b21" opacity="0.95"/>
+  <circle cx="404" cy="390" r="42" fill="#f26b21" opacity="0.14"/>
+  <path d="M88 344 C142 248 210 198 306 178 C350 168 389 146 424 112" fill="none" stroke="#f26b21" stroke-width="24" stroke-linecap="round" opacity="0.85"/>
+  <text x="256" y="254" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="66" font-weight="800" fill="#24304a">BigFox</text>
+  <text x="256" y="312" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" letter-spacing="3" fill="#24304a" opacity="0.72">RD</text>
+</svg>
