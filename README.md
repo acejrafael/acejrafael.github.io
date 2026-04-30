@@ -1,11 +1,14 @@
-# Jax Portfolio - main
+# Jax Portfolio
 
-Static GitHub Pages build for `acejrafael.github.io`.
+Static GitHub Pages-ready portfolio for `acejrafael.github.io`.
 
-- Source prototype: `04 - Squeeze Proof Landing`
-- Branch role: `main`
-- Resume downloads: PDF only, under `assets/resumes/`
-- Template downloads: ZIP packages under `assets/v2/downloads/`
-- Case studies: public-safe placeholder pages under `case-studies/`
+The `main` branch now contains one consolidated site:
 
-No CRM evidence, Gmail evidence, source maps, local Desktop paths, phone numbers, or private IDs are included.
+- `/` - style chooser homepage
+- `/classic-squeeze/` - conservative proof-first version
+- `/modern-parallax/` - modern technology/parallax version
+- `/curious-creative/` - vivid creative version with proof game
+- `/resumes/` - PDF-only resume downloads
+- `/case-studies/` - public-safe case-study placeholder pages
+
+No CRM evidence, Gmail evidence, source maps, local Desktop paths, phone numbers, DOCX resumes, or private IDs are included.
