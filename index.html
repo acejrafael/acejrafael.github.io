@@ -75,6 +75,10 @@
       <path d="M9 13h6"></path>
       <path d="M9 17h4"></path>
     </symbol>
+    <symbol id="icon-award" viewBox="0 0 24 24">
+      <circle cx="12" cy="8" r="5"></circle>
+      <path d="m8.8 12.2-1.3 8 4.5-2.6 4.5 2.6-1.3-8"></path>
+    </symbol>
     <symbol id="icon-sun" viewBox="0 0 24 24">
       <circle cx="12" cy="12" r="4"></circle>
       <path d="M12 2v2"></path>
@@ -98,9 +102,20 @@
     </a>
     <nav class="site-nav" aria-label="Portfolio navigation">
       <a href="#services"><svg class="icon"><use href="#icon-project"></use></svg><span data-en="Services" data-fr="Services" data-es="Servicios">Services</span></a>
+      <a href="#skills"><svg class="icon"><use href="#icon-chart"></use></svg><span data-en="Skills" data-fr="Competences" data-es="Habilidades">Skills</span></a>
+      <a href="#certifications"><svg class="icon"><use href="#icon-award"></use></svg><span data-en="Certifications" data-fr="Certifications" data-es="Certificaciones">Certifications</span></a>
       <a href="#proof"><svg class="icon"><use href="#icon-briefcase"></use></svg><span data-en="Proof" data-fr="Preuves" data-es="Pruebas">Proof</span></a>
       <a href="#templates"><svg class="icon"><use href="#icon-template"></use></svg><span data-en="Templates" data-fr="Modeles" data-es="Plantillas">Templates</span></a>
-      <a data-master-resume-link href="assets/resumes/jacques-wainright-master-resume-en.pdf" download><svg class="icon"><use href="#icon-file"></use></svg><span data-en="Resume" data-fr="CV" data-es="Curriculum">Resume</span></a>
+      <div class="resume-menu nav-resume-menu" data-resume-menu>
+        <button class="nav-resume-button" type="button" aria-haspopup="true" aria-expanded="false" data-resume-menu-button>
+          <svg class="icon"><use href="#icon-file"></use></svg><span data-en="Resume" data-fr="CV" data-es="Curriculum">Resume</span>
+        </button>
+        <div class="resume-menu-panel" data-resume-menu-panel>
+          <a href="assets/resumes/jacques-wainright-master-resume-en.pdf" target="_blank" rel="noopener"><svg class="icon small"><use href="#icon-external"></use></svg><span data-en="English PDF" data-fr="PDF anglais" data-es="PDF en ingles">English PDF</span></a>
+          <a href="assets/resumes/jacques-wainright-master-resume-fr.pdf" target="_blank" rel="noopener"><svg class="icon small"><use href="#icon-external"></use></svg><span data-en="French PDF" data-fr="PDF francais" data-es="PDF en frances">French PDF</span></a>
+          <a href="assets/resumes/jacques-wainright-master-resume-es.pdf" target="_blank" rel="noopener"><svg class="icon small"><use href="#icon-external"></use></svg><span data-en="Spanish PDF" data-fr="PDF espagnol" data-es="PDF en espanol">Spanish PDF</span></a>
+        </div>
+      </div>
       <a href="https://www.linkedin.com/in/jacques-wainright/" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-linkedin"></use></svg><span>LinkedIn</span></a>
     </nav>
     <div class="header-controls">
@@ -129,7 +144,16 @@
         <div class="actions">
           <a class="button" href="https://www.linkedin.com/in/jacques-wainright/" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-linkedin"></use></svg><span data-en="View LinkedIn" data-fr="Voir LinkedIn" data-es="Ver LinkedIn">View LinkedIn</span></a>
           <a class="button secondary" href="#templates"><svg class="icon"><use href="#icon-template"></use></svg><span data-en="Recommended templates" data-fr="Modeles recommandes" data-es="Plantillas recomendadas">Recommended templates</span></a>
-          <a class="button ghost" data-master-resume-link href="assets/resumes/jacques-wainright-master-resume-en.pdf" download><svg class="icon"><use href="#icon-download"></use></svg><span data-en="Download Resume" data-fr="Telecharger le CV" data-es="Descargar curriculum">Download Resume</span></a>
+          <div class="resume-menu hero-resume-menu" data-resume-menu>
+            <button class="button ghost" type="button" aria-haspopup="true" aria-expanded="false" data-resume-menu-button>
+              <svg class="icon"><use href="#icon-download"></use></svg><span data-en="Download Resume" data-fr="Telecharger le CV" data-es="Descargar curriculum">Download Resume</span>
+            </button>
+            <div class="resume-menu-panel" data-resume-menu-panel>
+              <a href="assets/resumes/jacques-wainright-master-resume-en.pdf" target="_blank" rel="noopener"><svg class="icon small"><use href="#icon-external"></use></svg><span data-en="English PDF" data-fr="PDF anglais" data-es="PDF en ingles">English PDF</span></a>
+              <a href="assets/resumes/jacques-wainright-master-resume-fr.pdf" target="_blank" rel="noopener"><svg class="icon small"><use href="#icon-external"></use></svg><span data-en="French PDF" data-fr="PDF francais" data-es="PDF en frances">French PDF</span></a>
+              <a href="assets/resumes/jacques-wainright-master-resume-es.pdf" target="_blank" rel="noopener"><svg class="icon small"><use href="#icon-external"></use></svg><span data-en="Spanish PDF" data-fr="PDF espagnol" data-es="PDF en espanol">Spanish PDF</span></a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -152,6 +176,101 @@
           <svg class="panel-icon"><use href="#icon-automation"></use></svg>
           <h3 data-en="CRM and AI automation" data-fr="CRM et automatisation IA" data-es="CRM y automatizacion con IA">CRM and AI automation</h3>
           <p data-en="Follow-up flows, AI agents, API integrations, and CRM workflows built for practical handoff and support capacity." data-fr="Flux de suivi, agents IA, integrations API et workflows CRM concus pour une passation claire et une meilleure capacite support." data-es="Flujos de seguimiento, agentes de IA, integraciones API y workflows CRM pensados para una entrega clara y mayor capacidad de soporte.">Follow-up flows, AI agents, API integrations, and CRM workflows built for practical handoff and support capacity.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section narrow" id="skills">
+      <p class="eyebrow reveal" data-en="Core skills" data-fr="Competences cles" data-es="Habilidades clave">Core skills</p>
+      <h2 class="reveal" data-en="Skills that connect delivery, marketing, systems, and reporting." data-fr="Des competences qui relient livraison, marketing, systemes et reporting." data-es="Habilidades que conectan entrega, marketing, sistemas y reportes.">Skills that connect delivery, marketing, systems, and reporting.</h2>
+      <div class="skill-grid">
+        <article class="skill-panel reveal">
+          <svg class="panel-icon"><use href="#icon-project"></use></svg>
+          <h3 data-en="Project and program delivery" data-fr="Gestion de projets et programmes" data-es="Entrega de proyectos y programas">Project and program delivery</h3>
+          <ul class="detail-list">
+            <li data-en="Scope, timeline, budget, risk, and change control" data-fr="Perimetre, calendrier, budget, risques et controle des changements" data-es="Alcance, cronograma, presupuesto, riesgos y control de cambios">Scope, timeline, budget, risk, and change control</li>
+            <li data-en="Agile, Scrum, Waterfall, PMBOK, PMP, and PMI-ACP discipline" data-fr="Agile, Scrum, Waterfall, PMBOK, PMP et discipline PMI-ACP" data-es="Agile, Scrum, Waterfall, PMBOK, PMP y disciplina PMI-ACP">Agile, Scrum, Waterfall, PMBOK, PMP, and PMI-ACP discipline</li>
+            <li data-en="ClickUp, Nifty, Jira, Asana, and stakeholder reporting" data-fr="ClickUp, Nifty, Jira, Asana et reporting aux parties prenantes" data-es="ClickUp, Nifty, Jira, Asana y reportes a interesados">ClickUp, Nifty, Jira, Asana, and stakeholder reporting</li>
+          </ul>
+        </article>
+        <article class="skill-panel reveal">
+          <svg class="panel-icon"><use href="#icon-chart"></use></svg>
+          <h3 data-en="Marketing strategy" data-fr="Strategie marketing" data-es="Estrategia de marketing">Marketing strategy</h3>
+          <ul class="detail-list">
+            <li data-en="Go-to-market planning, brand launches, and funnel strategy" data-fr="Plans go-to-market, lancements de marque et strategie d entonnoir" data-es="Planificacion go-to-market, lanzamientos de marca y estrategia de embudos">Go-to-market planning, brand launches, and funnel strategy</li>
+            <li data-en="Paid media, SEO, content, social, and campaign planning" data-fr="Paid media, SEO, contenu, social et planification de campagnes" data-es="Pauta digital, SEO, contenido, redes sociales y planificacion de campanas">Paid media, SEO, content, social, and campaign planning</li>
+            <li data-en="Customer journey mapping and competitive research" data-fr="Parcours client et recherche concurrentielle" data-es="Mapeo del recorrido del cliente e investigacion competitiva">Customer journey mapping and competitive research</li>
+          </ul>
+        </article>
+        <article class="skill-panel reveal">
+          <svg class="panel-icon"><use href="#icon-automation"></use></svg>
+          <h3 data-en="CRM and AI automation" data-fr="CRM et automatisation IA" data-es="CRM y automatizacion con IA">CRM and AI automation</h3>
+          <ul class="detail-list">
+            <li data-en="GoHighLevel, HubSpot, Salesforce, and Constant Contact" data-fr="GoHighLevel, HubSpot, Salesforce et Constant Contact" data-es="GoHighLevel, HubSpot, Salesforce y Constant Contact">GoHighLevel, HubSpot, Salesforce, and Constant Contact</li>
+            <li data-en="Zapier, Pabbly, API integrations, and appointment flows" data-fr="Zapier, Pabbly, integrations API et flux de rendez-vous" data-es="Zapier, Pabbly, integraciones API y flujos de citas">Zapier, Pabbly, API integrations, and appointment flows</li>
+            <li data-en="AI agents, lead nurturing, and practical handoff systems" data-fr="Agents IA, nurturing et systemes de passation pratiques" data-es="Agentes de IA, nutricion de leads y sistemas practicos de traspaso">AI agents, lead nurturing, and practical handoff systems</li>
+          </ul>
+        </article>
+        <article class="skill-panel reveal">
+          <svg class="panel-icon"><use href="#icon-file"></use></svg>
+          <h3 data-en="Analytics and reporting" data-fr="Analytique et reporting" data-es="Analitica y reportes">Analytics and reporting</h3>
+          <ul class="detail-list">
+            <li data-en="Google Analytics, Power BI, Tableau, SQL, and KPI dashboards" data-fr="Google Analytics, Power BI, Tableau, SQL et tableaux KPI" data-es="Google Analytics, Power BI, Tableau, SQL y tableros KPI">Google Analytics, Power BI, Tableau, SQL, and KPI dashboards</li>
+            <li data-en="ROAS, CPL, CVR, CTR, and campaign performance reporting" data-fr="ROAS, CPL, CVR, CTR et reporting de performance campagne" data-es="ROAS, CPL, CVR, CTR y reportes de rendimiento de campanas">ROAS, CPL, CVR, CTR, and campaign performance reporting</li>
+            <li data-en="Dashboards and decision-ready performance summaries" data-fr="Tableaux et syntheses de performance pretes a la decision" data-es="Tableros y resumenes de rendimiento listos para decidir">Dashboards and decision-ready performance summaries</li>
+          </ul>
+        </article>
+        <article class="skill-panel reveal">
+          <svg class="panel-icon"><use href="#icon-message"></use></svg>
+          <h3 data-en="Multilingual operations" data-fr="Operations multilingues" data-es="Operaciones multilingues">Multilingual operations</h3>
+          <ul class="detail-list">
+            <li data-en="English, French, Haitian Creole, and professional Spanish" data-fr="Anglais, francais, creole haitien et espagnol professionnel" data-es="Ingles, frances, creole haitiano y espanol profesional">English, French, Haitian Creole, and professional Spanish</li>
+            <li data-en="Legal, medical, court, agency, and business interpretation" data-fr="Interpretation juridique, medicale, judiciaire, agence et affaires" data-es="Interpretacion legal, medica, de corte, agencia y negocios">Legal, medical, court, agency, and business interpretation</li>
+            <li data-en="Cross-cultural client communication and documentation" data-fr="Communication client interculturelle et documentation" data-es="Comunicacion intercultural con clientes y documentacion">Cross-cultural client communication and documentation</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section narrow" id="certifications">
+      <p class="eyebrow reveal" data-en="Selected certifications" data-fr="Certifications selectionnees" data-es="Certificaciones seleccionadas">Selected certifications</p>
+      <h2 class="reveal" data-en="The credentials most relevant to project delivery, marketing systems, and automation." data-fr="Les certificats les plus pertinents pour la livraison projet, les systemes marketing et l automatisation." data-es="Las credenciales mas relevantes para entrega de proyectos, sistemas de marketing y automatizacion.">The credentials most relevant to project delivery, marketing systems, and automation.</h2>
+      <div class="cert-grid">
+        <article class="cert-card reveal">
+          <svg class="panel-icon"><use href="#icon-award"></use></svg>
+          <h3 data-en="Project management" data-fr="Gestion de projet" data-es="Gestion de proyectos">Project management</h3>
+          <ul class="detail-list">
+            <li data-en="PMP - active through May 2028" data-fr="PMP - actif jusqu en mai 2028" data-es="PMP - activo hasta mayo de 2028">PMP - active through May 2028</li>
+            <li data-en="PMI-ACP - active through November 2028" data-fr="PMI-ACP - actif jusqu en novembre 2028" data-es="PMI-ACP - activo hasta noviembre de 2028">PMI-ACP - active through November 2028</li>
+            <li data-en="Google Project Management Professional Certificate" data-fr="Certificat professionnel Google Project Management" data-es="Certificado profesional de Google Project Management">Google Project Management Professional Certificate</li>
+          </ul>
+        </article>
+        <article class="cert-card reveal">
+          <svg class="panel-icon"><use href="#icon-chart"></use></svg>
+          <h3 data-en="Marketing and analytics" data-fr="Marketing et analytique" data-es="Marketing y analitica">Marketing and analytics</h3>
+          <ul class="detail-list">
+            <li data-en="Meta Certified Business Marketing Strategy" data-fr="Meta Certified Business Marketing Strategy" data-es="Meta Certified Business Marketing Strategy">Meta Certified Business Marketing Strategy</li>
+            <li data-en="Google Analytics certification" data-fr="Certification Google Analytics" data-es="Certificacion de Google Analytics">Google Analytics certification</li>
+            <li data-en="Google Digital Marketing and E-commerce Certificate" data-fr="Certificat Google Digital Marketing and E-commerce" data-es="Certificado de Google Digital Marketing and E-commerce">Google Digital Marketing and E-commerce Certificate</li>
+          </ul>
+        </article>
+        <article class="cert-card reveal">
+          <svg class="panel-icon"><use href="#icon-automation"></use></svg>
+          <h3 data-en="CRM, platforms, and AI" data-fr="CRM, plateformes et IA" data-es="CRM, plataformas e IA">CRM, platforms, and AI</h3>
+          <ul class="detail-list">
+            <li data-en="HubSpot marketing, sales, and CRM credentials" data-fr="Certifications HubSpot marketing, ventes et CRM" data-es="Credenciales HubSpot de marketing, ventas y CRM">HubSpot marketing, sales, and CRM credentials</li>
+            <li data-en="ClickUp and Atlassian platform credentials" data-fr="Certificats ClickUp et Atlassian" data-es="Credenciales de plataformas ClickUp y Atlassian">ClickUp and Atlassian platform credentials</li>
+            <li data-en="PMI AI, GenAI, and prompt engineering credentials" data-fr="Certificats PMI IA, GenAI et prompt engineering" data-es="Credenciales PMI de IA, GenAI y prompt engineering">PMI AI, GenAI, and prompt engineering credentials</li>
+          </ul>
+        </article>
+        <article class="cert-card reveal">
+          <svg class="panel-icon"><use href="#icon-file"></use></svg>
+          <h3 data-en="Quality and technical" data-fr="Qualite et technique" data-es="Calidad y tecnico">Quality and technical</h3>
+          <ul class="detail-list">
+            <li data-en="Certified Six Sigma Black Belt" data-fr="Certified Six Sigma Black Belt" data-es="Certified Six Sigma Black Belt">Certified Six Sigma Black Belt</li>
+            <li data-en="Lean Six Sigma Green Belt" data-fr="Lean Six Sigma Green Belt" data-es="Lean Six Sigma Green Belt">Lean Six Sigma Green Belt</li>
+            <li data-en="PCEP Certified Entry-Level Python Programmer" data-fr="PCEP Certified Entry-Level Python Programmer" data-es="PCEP Certified Entry-Level Python Programmer">PCEP Certified Entry-Level Python Programmer</li>
+          </ul>
         </article>
       </div>
     </section>

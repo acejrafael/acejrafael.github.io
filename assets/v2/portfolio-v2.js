@@ -1,11 +1,6 @@
 (() => {
   const LINKEDIN_URL = "https://www.linkedin.com/in/jacques-wainright/";
   const LANGUAGES = ["en", "fr", "es"];
-  const masterResumeFiles = {
-    en: "jacques-wainright-master-resume-en.pdf",
-    fr: "jacques-wainright-master-resume-fr.pdf",
-    es: "jacques-wainright-master-resume-en.pdf"
-  };
   const themeLabels = {
     dark: {
       en: "Switch to light mode",
@@ -132,19 +127,21 @@
       valueFr: "Chartes, Gantt, risques, parties prenantes, backlog et rapports de statut.",
       valueEs: "Actas, planificacion Gantt, riesgos, partes interesadas, backlog y reportes de estado.",
       zipEn: "Jax-Portfolio-Project-Management-EN.zip",
-      zipFr: "Portfolio-Jax-Gestion-De-Projet-FR.zip"
+      zipFr: "Portfolio-Jax-Gestion-De-Projet-FR.zip",
+      zipEs: "Portfolio-Jax-Gestion-De-Proyectos-ES.zip"
     },
     {
       icon: "chart",
       en: "Marketing CRM and Campaigns",
       fr: "Marketing CRM et campagnes",
       es: "Marketing CRM y campanas",
-      count: 10,
+      count: 11,
       valueEn: "Marketing plans, personas, paid media, social calendars, and CRM lifecycle.",
       valueFr: "Plans marketing, personas, medias payants, calendriers sociaux et cycle CRM.",
       valueEs: "Planes de marketing, perfiles de cliente, pauta digital, calendarios sociales y ciclo CRM.",
       zipEn: "Jax-Portfolio-Marketing-CRM-Campaigns-EN.zip",
-      zipFr: "Portfolio-Jax-Marketing-CRM-Campagnes-FR.zip"
+      zipFr: "Portfolio-Jax-Marketing-CRM-Campagnes-FR.zip",
+      zipEs: "Portfolio-Jax-Marketing-CRM-Campanas-ES.zip"
     },
     {
       icon: "automation",
@@ -156,7 +153,8 @@
       valueFr: "Reactivation CRM, cartes de flux, processus de prompts et planification IA.",
       valueEs: "Reactivacion CRM, mapas de workflow, procesos de prompts y planificacion de entregas con IA.",
       zipEn: "Jax-Portfolio-AI-Automation-Workflows-EN.zip",
-      zipFr: "Portfolio-Jax-IA-Automatisation-Flux-FR.zip"
+      zipFr: "Portfolio-Jax-IA-Automatisation-Flux-FR.zip",
+      zipEs: "Portfolio-Jax-IA-Automatizacion-Workflows-ES.zip"
     }
   ];
 
@@ -169,14 +167,15 @@
       valueFr: "CV complet de reference pour une revue globale.",
       valueEs: "Curriculum completo de referencia para revisar el perfil general.",
       fileEn: "jacques-wainright-master-resume-en.pdf",
-      fileFr: "jacques-wainright-master-resume-fr.pdf"
+      fileFr: "jacques-wainright-master-resume-fr.pdf",
+      fileEs: "jacques-wainright-master-resume-es.pdf"
     }
   ];
 
   const resumeButtonLabels = {
-    en: { enPdf: "English PDF", frPdf: "French PDF" },
-    fr: { enPdf: "PDF anglais", frPdf: "PDF francais" },
-    es: { enPdf: "PDF en ingles", frPdf: "PDF en frances" }
+    en: { enPdf: "English PDF", frPdf: "French PDF", esPdf: "Spanish PDF" },
+    fr: { enPdf: "PDF anglais", frPdf: "PDF francais", esPdf: "PDF espagnol" },
+    es: { enPdf: "PDF en ingles", frPdf: "PDF en frances", esPdf: "PDF en espanol" }
   };
 
   function icon(name, className = "icon") {
@@ -225,7 +224,7 @@
       templatePacks.forEach((pack) => {
         const title = localized(pack, lang);
         const value = localized(pack, lang, "value");
-        const zip = lang === "fr" ? pack.zipFr : pack.zipEn;
+        const zip = lang === "fr" ? pack.zipFr : lang === "es" ? pack.zipEs : pack.zipEn;
         const card = document.createElement("article");
         card.className = "template-card reveal is-visible";
         card.innerHTML = `
@@ -253,20 +252,13 @@
           <h3>${localized(resume, lang)}</h3>
           <p>${localized(resume, lang, "value")}</p>
           <div class="resume-actions">
-            <a class="button secondary" href="assets/resumes/${resume.fileEn}" download>${icon("download")}<span>${labels.enPdf}</span></a>
-            <a class="button secondary" href="assets/resumes/${resume.fileFr}" download>${icon("download")}<span>${labels.frPdf}</span></a>
+            <a class="button secondary" href="assets/resumes/${resume.fileEn}" target="_blank" rel="noopener">${icon("external")}<span>${labels.enPdf}</span></a>
+            <a class="button secondary" href="assets/resumes/${resume.fileFr}" target="_blank" rel="noopener">${icon("external")}<span>${labels.frPdf}</span></a>
+            <a class="button secondary" href="assets/resumes/${resume.fileEs}" target="_blank" rel="noopener">${icon("external")}<span>${labels.esPdf}</span></a>
           </div>
         `;
         container.appendChild(card);
       });
-    });
-  }
-
-  function updateMasterResumeLinks(lang) {
-    const file = masterResumeFiles[lang] || masterResumeFiles.en;
-    document.querySelectorAll("[data-master-resume-link]").forEach((link) => {
-      link.href = `assets/resumes/${file}`;
-      link.setAttribute("download", "");
     });
   }
 
@@ -300,11 +292,40 @@
       button.classList.toggle("is-active", active);
       button.setAttribute("aria-pressed", active ? "true" : "false");
     });
-    updateMasterResumeLinks(normalized);
     updateThemeLabel(normalized);
     renderProof(normalized);
     renderTemplates(normalized);
     renderResumes(normalized);
+  }
+
+  function closeResumeMenus(exceptMenu) {
+    document.querySelectorAll("[data-resume-menu]").forEach((menu) => {
+      if (menu === exceptMenu) return;
+      menu.classList.remove("is-open");
+      menu.querySelector("[data-resume-menu-button]")?.setAttribute("aria-expanded", "false");
+    });
+  }
+
+  function initResumeMenus() {
+    document.querySelectorAll("[data-resume-menu]").forEach((menu) => {
+      const button = menu.querySelector("[data-resume-menu-button]");
+      if (!button) return;
+      button.addEventListener("click", (event) => {
+        event.stopPropagation();
+        const shouldOpen = !menu.classList.contains("is-open");
+        closeResumeMenus(menu);
+        menu.classList.toggle("is-open", shouldOpen);
+        button.setAttribute("aria-expanded", shouldOpen ? "true" : "false");
+      });
+      menu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => closeResumeMenus());
+      });
+    });
+
+    document.addEventListener("click", () => closeResumeMenus());
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeResumeMenus();
+    });
   }
 
   function initLanguage() {
@@ -358,6 +379,7 @@
 
   initTheme();
   initLanguage();
+  initResumeMenus();
   initReveal();
   initParallax();
 })();
