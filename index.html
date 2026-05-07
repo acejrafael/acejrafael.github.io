@@ -1,101 +1,201 @@
 <!doctype html>
-<html lang="en" data-asset-base="assets/v2/" data-case-base="case-studies/">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jax Portfolio - Style Chooser</title>
+  <title>Jacques Wainright Portfolio</title>
+  <meta name="description" content="Jacques Rafael Wainright portfolio for digital project management, marketing strategy, CRM automation, and AI-supported workflows.">
   <link rel="icon" href="assets/v2/jax-avatar.png" type="image/png">
   <link rel="stylesheet" href="assets/v2/portfolio-v2.css">
   <script src="assets/v2/portfolio-v2.js" defer></script>
 </head>
-<body class="theme-home">
+<body>
+  <svg class="icon-sprite" aria-hidden="true" focusable="false">
+    <symbol id="icon-linkedin" viewBox="0 0 24 24">
+      <path d="M6.5 8.8H3.2v11h3.3v-11Z"></path>
+      <path d="M4.9 7.3A1.9 1.9 0 1 0 4.9 3.5a1.9 1.9 0 0 0 0 3.8Z"></path>
+      <path d="M20.8 13.5c0-3.1-1.7-5-4.3-5-1.5 0-2.6.7-3.2 1.6V8.8H10v11h3.3v-6c0-1.6.9-2.5 2.2-2.5 1.2 0 2 .8 2 2.5v6h3.3v-6.3Z"></path>
+    </symbol>
+    <symbol id="icon-download" viewBox="0 0 24 24">
+      <path d="M12 3v10"></path>
+      <path d="m8 10 4 4 4-4"></path>
+      <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"></path>
+    </symbol>
+    <symbol id="icon-template" viewBox="0 0 24 24">
+      <path d="M4 5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5Z"></path>
+      <path d="M8 8h8"></path>
+      <path d="M8 12h8"></path>
+      <path d="M8 16h5"></path>
+    </symbol>
+    <symbol id="icon-education" viewBox="0 0 24 24">
+      <path d="m3 8 9-5 9 5-9 5-9-5Z"></path>
+      <path d="M7 10.4V15c0 1.7 2.2 3 5 3s5-1.3 5-3v-4.6"></path>
+      <path d="M21 8v6"></path>
+    </symbol>
+    <symbol id="icon-briefcase" viewBox="0 0 24 24">
+      <path d="M9 6V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1"></path>
+      <path d="M4 7h16v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7Z"></path>
+      <path d="M4 12h16"></path>
+    </symbol>
+    <symbol id="icon-message" viewBox="0 0 24 24">
+      <path d="M5 5h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H9l-5 4v-4H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"></path>
+      <path d="M8 9h8"></path>
+      <path d="M8 13h5"></path>
+    </symbol>
+    <symbol id="icon-external" viewBox="0 0 24 24">
+      <path d="M14 4h6v6"></path>
+      <path d="m10 14 10-10"></path>
+      <path d="M20 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h4"></path>
+    </symbol>
+    <symbol id="icon-project" viewBox="0 0 24 24">
+      <path d="M4 6h16"></path>
+      <path d="M4 12h10"></path>
+      <path d="M4 18h7"></path>
+      <path d="M17 14l3 3-3 3"></path>
+    </symbol>
+    <symbol id="icon-chart" viewBox="0 0 24 24">
+      <path d="M4 20V4"></path>
+      <path d="M4 20h16"></path>
+      <path d="M8 16l3-4 3 2 5-8"></path>
+    </symbol>
+    <symbol id="icon-automation" viewBox="0 0 24 24">
+      <path d="M12 3v4"></path>
+      <path d="M12 17v4"></path>
+      <path d="M3 12h4"></path>
+      <path d="M17 12h4"></path>
+      <path d="M8.5 8.5 6 6"></path>
+      <path d="m18 18-2.5-2.5"></path>
+      <path d="M15.5 8.5 18 6"></path>
+      <path d="m6 18 2.5-2.5"></path>
+      <circle cx="12" cy="12" r="3.5"></circle>
+    </symbol>
+    <symbol id="icon-file" viewBox="0 0 24 24">
+      <path d="M6 3h8l4 4v14H6V3Z"></path>
+      <path d="M14 3v5h5"></path>
+      <path d="M9 13h6"></path>
+      <path d="M9 17h4"></path>
+    </symbol>
+    <symbol id="icon-sun" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="4"></circle>
+      <path d="M12 2v2"></path>
+      <path d="M12 20v2"></path>
+      <path d="m4.9 4.9 1.4 1.4"></path>
+      <path d="m17.7 17.7 1.4 1.4"></path>
+      <path d="M2 12h2"></path>
+      <path d="M20 12h2"></path>
+      <path d="m4.9 19.1 1.4-1.4"></path>
+      <path d="m17.7 6.3 1.4-1.4"></path>
+    </symbol>
+    <symbol id="icon-moon" viewBox="0 0 24 24">
+      <path d="M20 15.2A8.5 8.5 0 0 1 8.8 4a7 7 0 1 0 11.2 11.2Z"></path>
+    </symbol>
+  </svg>
 
   <header class="site-header">
-    <a class="brand-lockup" href="index.html">
-      <img src="assets/v2/jax-avatar.png" alt="Jax profile avatar">
-      <span>Jax Portfolio</span>
+    <a class="brand-lockup" href="#top" aria-label="Jacques Wainright home">
+      <img src="assets/v2/jax-avatar.png" alt="Jacques Rafael Wainright profile avatar">
+      <span>Jacques Wainright</span>
     </a>
     <nav class="site-nav" aria-label="Portfolio navigation">
-      <a href="index.html" data-en="Home" data-fr="Accueil">Home</a>
-      <a href="index.html#styles" data-en="Styles" data-fr="Styles">Styles</a>
-      <a href="resumes/index.html" data-en="Resumes" data-fr="CV">Resumes</a>
-      <a href="#templates" data-en="Templates" data-fr="Modeles">Templates</a>
-      <a href="#cases" data-en="Case Studies" data-fr="Cas clients">Case Studies</a>
-      <a href="https://www.linkedin.com/in/Jacques-Wainright" target="_blank" rel="noopener" data-en="LinkedIn" data-fr="LinkedIn">LinkedIn</a>
+      <a href="#services"><svg class="icon"><use href="#icon-project"></use></svg><span data-en="Services" data-fr="Services" data-es="Servicios">Services</span></a>
+      <a href="#proof"><svg class="icon"><use href="#icon-briefcase"></use></svg><span data-en="Proof" data-fr="Preuves" data-es="Pruebas">Proof</span></a>
+      <a href="#templates"><svg class="icon"><use href="#icon-template"></use></svg><span data-en="Templates" data-fr="Modeles" data-es="Plantillas">Templates</span></a>
+      <a data-master-resume-link href="assets/resumes/jacques-wainright-master-resume-en.pdf" download><svg class="icon"><use href="#icon-file"></use></svg><span data-en="Resume" data-fr="CV" data-es="Curriculum">Resume</span></a>
+      <a href="https://www.linkedin.com/in/jacques-wainright/" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-linkedin"></use></svg><span>LinkedIn</span></a>
     </nav>
-    <div class="language-toggle" aria-label="Language">
-      <button type="button" data-lang="en">EN</button>
-      <button type="button" data-lang="fr">FR</button>
+    <div class="header-controls">
+      <div class="language-toggle" aria-label="Language">
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="fr">FR</button>
+        <button type="button" data-lang="es">ES</button>
+      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode" title="Switch to light mode">
+        <svg class="icon theme-icon-sun"><use href="#icon-sun"></use></svg>
+        <svg class="icon theme-icon-moon"><use href="#icon-moon"></use></svg>
+        <span class="sr-only" data-theme-label>Switch to light mode</span>
+      </button>
     </div>
   </header>
-  <main>
 
-    <section class="home-hero section">
-      <div class="home-copy reveal">
-        <p class="eyebrow" data-en="Jacques Rafael Wainright - MBA, PMP, PMI-ACP" data-fr="Jacques Rafael Wainright - MBA, PMP, PMI-ACP">Jacques Rafael Wainright - MBA, PMP, PMI-ACP</p>
-        <h1 data-en="Choose the portfolio style that fits the conversation." data-fr="Choisissez le style de portfolio adapte a la conversation.">Choose the portfolio style that fits the conversation.</h1>
-        <p class="lead" data-en="Digital project manager, marketing strategist, and CRM/AI automation builder with 60+ campaigns, 40+ brands, $60K+ in ad budgets, and bilingual client-ready templates." data-fr="Gestionnaire de projets numeriques, strategiste marketing et specialiste CRM/IA avec plus de 60 campagnes, plus de 40 marques, plus de 60 k$ de budgets publicitaires et des modeles bilingues prets pour les clients.">Digital project manager, marketing strategist, and CRM/AI automation builder with 60+ campaigns, 40+ brands, $60K+ in ad budgets, and bilingual client-ready templates.</p>
+  <main id="top">
+    <section class="hero">
+      <img class="hero-image" src="assets/v2/jax-builder-side.jpeg" alt="Jacques Wainright working at a digital workspace" data-parallax=".035">
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-copy reveal">
+        <p class="eyebrow" data-en="MBA, PMP, PMI-ACP" data-fr="MBA, PMP, PMI-ACP" data-es="MBA, PMP, PMI-ACP">MBA, PMP, PMI-ACP</p>
+        <h1 data-en="Digital project leadership for campaigns, CRM systems, and automation." data-fr="Pilotage de projets numeriques pour campagnes, CRM et automatisation." data-es="Liderazgo de proyectos digitales para campanas, CRM y automatizacion.">Digital project leadership for campaigns, CRM systems, and automation.</h1>
+        <p class="lead" data-en="I help teams turn scattered digital work into scoped delivery, measurable campaigns, and practical CRM/AI workflows that clients can understand." data-fr="J aide les equipes a transformer le travail numerique disperse en livraison structuree, campagnes mesurables et flux CRM/IA faciles a comprendre." data-es="Ayudo a los equipos a convertir trabajo digital disperso en entregas claras, campanas medibles y flujos CRM/IA practicos que los clientes pueden entender.">I help teams turn scattered digital work into scoped delivery, measurable campaigns, and practical CRM/AI workflows that clients can understand.</p>
         <div class="actions">
-          <a class="button" href="#styles" data-en="Compare styles" data-fr="Comparer les styles">Compare styles</a>
-          <a class="button secondary" href="resumes/index.html" data-en="Download resumes" data-fr="Telecharger les CV">Download resumes</a>
-          <a class="button ghost" href="https://www.linkedin.com/in/Jacques-Wainright" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="button" href="https://www.linkedin.com/in/jacques-wainright/" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-linkedin"></use></svg><span data-en="View LinkedIn" data-fr="Voir LinkedIn" data-es="Ver LinkedIn">View LinkedIn</span></a>
+          <a class="button secondary" href="#templates"><svg class="icon"><use href="#icon-template"></use></svg><span data-en="Recommended templates" data-fr="Modeles recommandes" data-es="Plantillas recomendadas">Recommended templates</span></a>
+          <a class="button ghost" data-master-resume-link href="assets/resumes/jacques-wainright-master-resume-en.pdf" download><svg class="icon"><use href="#icon-download"></use></svg><span data-en="Download Resume" data-fr="Telecharger le CV" data-es="Descargar curriculum">Download Resume</span></a>
         </div>
       </div>
-      <figure class="home-portrait reveal">
-        <img src="assets/v2/jax-portrait-clean.jpeg" alt="Jacques Rafael Wainright looking at the camera">
-        <figcaption data-en="Project discipline, marketing systems, and automation proof." data-fr="Discipline projet, systemes marketing et preuves d automatisation.">Project discipline, marketing systems, and automation proof.</figcaption>
-      </figure>
     </section>
-    <section class="section narrow home-proof">
-      <div class="proof-row">
-        <div><strong>60+</strong><span data-en="campaigns delivered" data-fr="campagnes livrees">campaigns delivered</span></div>
-        <div><strong>40+</strong><span data-en="brands supported" data-fr="marques accompagnees">brands supported</span></div>
-        <div><strong>25k</strong><span data-en="contacts reached" data-fr="contacts atteints">contacts reached</span></div>
-        <div><strong>4x</strong><span data-en="support capacity lift" data-fr="hausse de capacite support">support capacity lift</span></div>
+
+    <section class="section narrow" id="services">
+      <p class="eyebrow reveal" data-en="What clients get" data-fr="Ce que les clients obtiennent" data-es="Lo que reciben los clientes">What clients get</p>
+      <h2 class="reveal" data-en="Clear delivery, cleaner systems, and proof people can act on." data-fr="Une livraison claire, des systemes propres et des preuves exploitables." data-es="Entregas claras, sistemas mas limpios y pruebas que se pueden usar.">Clear delivery, cleaner systems, and proof people can act on.</h2>
+      <div class="service-grid">
+        <article class="service-panel reveal">
+          <svg class="panel-icon"><use href="#icon-project"></use></svg>
+          <h3 data-en="Project operating discipline" data-fr="Discipline operationnelle projet" data-es="Disciplina operativa de proyectos">Project operating discipline</h3>
+          <p data-en="Scopes, owners, timelines, risks, task boards, and reporting that turn ambiguity into accountable delivery." data-fr="Perimetres, responsables, calendriers, risques, tableaux de taches et rapports qui transforment l ambiguite en livraison responsable." data-es="Alcances, responsables, tiempos, riesgos, tableros de tareas y reportes que convierten la ambiguedad en entregas responsables.">Scopes, owners, timelines, risks, task boards, and reporting that turn ambiguity into accountable delivery.</p>
+        </article>
+        <article class="service-panel reveal">
+          <svg class="panel-icon"><use href="#icon-chart"></use></svg>
+          <h3 data-en="Marketing execution systems" data-fr="Systemes d execution marketing" data-es="Sistemas de ejecucion de marketing">Marketing execution systems</h3>
+          <p data-en="Campaign planning, paid media, SEO, analytics, and content workflows organized around measurable outcomes." data-fr="Planification de campagnes, paid media, SEO, analytique et flux de contenu organises autour de resultats mesurables." data-es="Planificacion de campanas, pauta digital, SEO, analitica y flujos de contenido organizados alrededor de resultados medibles.">Campaign planning, paid media, SEO, analytics, and content workflows organized around measurable outcomes.</p>
+        </article>
+        <article class="service-panel reveal">
+          <svg class="panel-icon"><use href="#icon-automation"></use></svg>
+          <h3 data-en="CRM and AI automation" data-fr="CRM et automatisation IA" data-es="CRM y automatizacion con IA">CRM and AI automation</h3>
+          <p data-en="Follow-up flows, AI agents, API integrations, and CRM workflows built for practical handoff and support capacity." data-fr="Flux de suivi, agents IA, integrations API et workflows CRM concus pour une passation claire et une meilleure capacite support." data-es="Flujos de seguimiento, agentes de IA, integraciones API y workflows CRM pensados para una entrega clara y mayor capacidad de soporte.">Follow-up flows, AI agents, API integrations, and CRM workflows built for practical handoff and support capacity.</p>
+        </article>
       </div>
     </section>
-    <section class="section narrow" id="styles">
-      <p class="eyebrow reveal" data-en="Three ways to read the same proof" data-fr="Trois facons de lire les memes preuves">Three ways to read the same proof</p>
-      <h2 class="reveal" data-en="Same substance, different art direction." data-fr="Meme substance, direction artistique differente.">Same substance, different art direction.</h2>
-      <div class="style-grid">
-        <a class="style-card reveal" href="classic-squeeze/index.html">
-          <span class="eyebrow" data-en="Classic / Conservative" data-fr="Classique / conservateur">Classic / Conservative</span>
-          <h2 data-en="Classic Squeeze" data-fr="Squeeze classique">Classic Squeeze</h2>
-          <p data-en="A restrained, proof-first portfolio for recruiters, executives, and clients who want clarity fast." data-fr="Un portfolio sobre et axe sur les preuves pour recruteurs, dirigeants et clients qui veulent comprendre vite.">A restrained, proof-first portfolio for recruiters, executives, and clients who want clarity fast.</p>
-          <span class="style-meta">Serif + navy + ivory</span>
-        </a>
 
-        <a class="style-card reveal" href="modern-parallax/index.html">
-          <span class="eyebrow" data-en="Modern / Technology" data-fr="Moderne / technologie">Modern / Technology</span>
-          <h2 data-en="Modern Parallax" data-fr="Parallaxe moderne">Modern Parallax</h2>
-          <p data-en="A deeper scrolling story for visitors who want the systems, motion, and tech-forward side of the work." data-fr="Un recit immersif pour montrer les systemes, le mouvement et le cote technologique du travail.">A deeper scrolling story for visitors who want the systems, motion, and tech-forward side of the work.</p>
-          <span class="style-meta">Mono + dark + cyan</span>
-        </a>
+    <section class="section narrow" aria-labelledby="metrics-title">
+      <p class="eyebrow reveal" data-en="Measured proof" data-fr="Preuves mesurees" data-es="Pruebas medibles">Measured proof</p>
+      <h2 id="metrics-title" class="reveal" data-en="Proof points from the work." data-fr="Points de preuve issus du travail." data-es="Puntos de prueba del trabajo.">Proof points from the work.</h2>
+      <div class="metric-grid">
+        <article class="metric reveal"><strong>60+</strong><span data-en="campaigns delivered" data-fr="campagnes livrees" data-es="campanas entregadas">campaigns delivered</span></article>
+        <article class="metric reveal"><strong>40+</strong><span data-en="brands supported" data-fr="marques accompagnees" data-es="marcas apoyadas">brands supported</span></article>
+        <article class="metric reveal"><strong>$60K+</strong><span data-en="ad budgets managed" data-fr="budgets publicitaires geres" data-es="presupuestos publicitarios gestionados">ad budgets managed</span></article>
+        <article class="metric reveal"><strong>25K</strong><span data-en="contacts reached in one month" data-fr="contacts atteints en un mois" data-es="contactos alcanzados en un mes">contacts reached in one month</span></article>
+        <article class="metric reveal"><strong>4x</strong><span data-en="support capacity lift" data-fr="hausse de capacite support" data-es="aumento en capacidad de soporte">support capacity lift</span></article>
+        <article class="metric reveal"><strong>8-9</strong><span data-en="demos supported per day" data-fr="demos soutenues par jour" data-es="demos apoyadas por dia">demos supported per day</span></article>
+      </div>
+    </section>
 
-        <a class="style-card reveal" href="curious-creative/index.html">
-          <span class="eyebrow" data-en="Curious / Creative" data-fr="Curieux / creatif">Curious / Creative</span>
-          <h2 data-en="Curious Creative" data-fr="Creatif curieux">Curious Creative</h2>
-          <p data-en="A vivid, interactive version with stronger emotion, playful color, and the proof-collection game." data-fr="Une version vive et interactive avec plus d emotion, de couleur et le mini-jeu de preuves.">A vivid, interactive version with stronger emotion, playful color, and the proof-collection game.</p>
-          <span class="style-meta">Rounded + vivid + playful</span>
-        </a></div>
+    <section class="section narrow" id="proof">
+      <p class="eyebrow reveal" data-en="Resume-backed proof" data-fr="Preuves appuyees par le CV" data-es="Pruebas respaldadas por el curriculum">Resume-backed proof</p>
+      <h2 class="reveal" data-en="Organizations, service, and education included on the public profile." data-fr="Organisations, service et formation inclus dans le profil public." data-es="Organizaciones, servicio y educacion incluidos en el perfil publico.">Organizations, service, and education included on the public profile.</h2>
+      <p class="section-note reveal" data-en="These are reference points, not article links." data-fr="Ce sont des reperes de reference, pas des liens vers des articles." data-es="Estos son puntos de referencia, no enlaces a articulos.">These are reference points, not article links.</p>
+      <div class="proof-grid" data-proof-grid></div>
     </section>
 
     <section class="section narrow" id="templates">
-      <p class="eyebrow reveal" data-en="Template downloads" data-fr="Telechargements de modeles">Template downloads</p>
-      <h2 class="reveal" data-en="Client-ready document kits in English and French." data-fr="Kits de documents prets pour les clients en anglais et en francais.">Client-ready document kits in English and French.</h2>
-      <div class="download-grid" data-downloads></div>
-    </section>
-    <section class="section narrow" id="cases">
-      <p class="eyebrow reveal" data-en="Clients, brands, and prior experience" data-fr="Clients, marques et experience precedente">Clients, brands, and prior experience</p>
-      <h2 class="reveal" data-en="A public-safe proof wall across agency work, internal brands, and earlier roles." data-fr="Un mur de preuves public qui relie travail en agence, marques internes et roles precedents.">A public-safe proof wall across agency work, internal brands, and earlier roles.</h2>
-      <div class="logo-wall" data-client-logos></div>
+      <p class="eyebrow reveal" data-en="Recommended templates" data-fr="Modeles recommandes" data-es="Plantillas recomendadas">Recommended templates</p>
+      <h2 class="reveal" data-en="Start with the three working kits I would recommend first." data-fr="Commencez avec les trois kits de travail que je recommanderais d abord." data-es="Empieza con los tres kits de trabajo que recomendaria primero.">Start with the three working kits I would recommend first.</h2>
+      <p class="section-note reveal" data-en="Need a different working template? Message me on LinkedIn and I can point you to the right document." data-fr="Besoin d un autre modele de travail? Envoyez-moi un message sur LinkedIn et je peux vous orienter vers le bon document." data-es="Necesitas otra plantilla de trabajo? Escribeme por LinkedIn y te puedo orientar hacia el documento correcto.">Need a different working template? Message me on LinkedIn and I can point you to the right document.</p>
+      <div class="template-grid" data-template-grid></div>
     </section>
 
+    <section class="section narrow" id="resume">
+      <p class="eyebrow reveal" data-en="Master resume" data-fr="CV maitre" data-es="Curriculum principal">Master resume</p>
+      <h2 class="reveal" data-en="One clear resume for the full picture." data-fr="Un seul CV clair pour une vue complete." data-es="Un solo curriculum claro para ver el perfil completo.">One clear resume for the full picture.</h2>
+      <div class="resume-grid" data-resume-grid></div>
+    </section>
   </main>
 
   <footer class="footer">
-    <span data-en="GitHub Pages-ready portfolio. No private CRM, Gmail, IDs, or raw proposal details are exposed." data-fr="Portfolio pret pour GitHub Pages. Aucun detail prive CRM, Gmail, identifiant ou proposition brute n est expose.">GitHub Pages-ready portfolio. No private CRM, Gmail, IDs, or raw proposal details are exposed.</span>
-    <a href="resumes/index.html" data-en="Download resumes" data-fr="Telecharger les CV">Download resumes</a>
+    <div>
+      <strong>Jacques Rafael Wainright</strong>
+      <span data-en="Digital project manager, marketing strategist, and CRM/AI automation builder." data-fr="Chef de projet numerique, strategiste marketing et specialiste CRM/IA." data-es="Gerente de proyectos digitales, estratega de marketing y constructor de automatizacion CRM/IA.">Digital project manager, marketing strategist, and CRM/AI automation builder.</span>
+    </div>
+    <a href="https://www.linkedin.com/in/jacques-wainright/" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-linkedin"></use></svg><span data-en="Connect on LinkedIn" data-fr="Me contacter sur LinkedIn" data-es="Conectar en LinkedIn">Connect on LinkedIn</span><svg class="icon small"><use href="#icon-external"></use></svg></a>
   </footer>
 </body>
 </html>

@@ -1,16 +1,13 @@
-# Jax Portfolio
+# Jacques Wainright Portfolio
 
-Static GitHub Pages-ready portfolio for `acejrafael.github.io`.
+Static GitHub Pages portfolio for `acejrafael.github.io`.
 
-The `main` branch now contains one consolidated site:
+The `main` branch serves one final single-page portfolio from `/`.
 
-- `/` - style chooser homepage
-- `/classic-squeeze/` - conservative proof-first version
-- `/modern-parallax/` - modern technology/parallax version
-- `/curious-creative/` - vivid creative version with proof game
-- `/resumes/` - PDF-only resume downloads
-- `/case-studies/` - public-safe case-study placeholder pages
+- Dark mode is the default, with a light mode toggle.
+- English, French, and Central America Spanish interface copy are included.
+- LinkedIn is featured as the primary social profile.
+- The public resume download uses the master resume only.
+- Three recommended template packs are included: project management, marketing CRM/campaigns, and AI automation/workflow systems.
 
-No CRM evidence, Gmail evidence, source maps, local Desktop paths, phone numbers, DOCX resumes, or private IDs are included.
-
-- Case wall includes 36 public-safe client, brand, and prior-experience profiles.
+No CRM evidence, Gmail evidence, source maps, local Desktop paths, phone numbers, DOCX resumes, raw proposals, case-study pages, or private IDs are included.
