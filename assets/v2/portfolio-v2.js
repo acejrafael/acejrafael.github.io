@@ -160,15 +160,37 @@
 
   const resumes = [
     {
-      en: "Master Resume",
-      fr: "CV maitre",
-      es: "Curriculum principal",
-      valueEn: "Full source-of-truth resume for broad review.",
-      valueFr: "CV complet de reference pour une revue globale.",
-      valueEs: "Curriculum completo de referencia para revisar el perfil general.",
-      fileEn: "jacques-wainright-master-resume-en.pdf",
-      fileFr: "jacques-wainright-master-resume-fr.pdf",
-      fileEs: "jacques-wainright-master-resume-es.pdf"
+      en: "Project Manager Resume",
+      fr: "CV chef de projet",
+      es: "CV gerente de proyectos",
+      valueEn: "Best fit for digital project manager, PMO, agency delivery, and operations roles.",
+      valueFr: "Meilleur choix pour gestion de projet numerique, PMO, livraison agence et operations.",
+      valueEs: "Mejor opcion para gestion de proyectos digitales, PMO, entrega de agencia y operaciones.",
+      fileEn: "jacques-wainright-project-manager-resume-en.pdf",
+      fileFr: "jacques-wainright-project-manager-resume-fr.pdf",
+      fileEs: "jacques-wainright-project-manager-resume-es.pdf"
+    },
+    {
+      en: "Marketing Strategist Resume",
+      fr: "CV strategiste marketing",
+      es: "CV estratega de marketing",
+      valueEn: "Best fit for marketing strategy, CRM automation, paid media, analytics, and growth roles.",
+      valueFr: "Meilleur choix pour strategie marketing, CRM, automatisation, paid media, analytique et croissance.",
+      valueEs: "Mejor opcion para estrategia de marketing, CRM, automatizacion, medios pagados, analitica y crecimiento.",
+      fileEn: "jacques-wainright-marketing-strategist-resume-en.pdf",
+      fileFr: "jacques-wainright-marketing-strategist-resume-fr.pdf",
+      fileEs: "jacques-wainright-marketing-strategist-resume-es.pdf"
+    },
+    {
+      en: "Executive Operations + CRM Resume",
+      fr: "CV operations executives + CRM",
+      es: "CV operaciones ejecutivas + CRM",
+      valueEn: "Best fit for founder support, executive operations, CRM automation, follow-up systems, and AI-ready workflows.",
+      valueFr: "Meilleur choix pour soutien fondateur, operations executives, automatisation CRM, suivi et workflows prets pour l IA.",
+      valueEs: "Mejor opcion para soporte a fundadores, operaciones ejecutivas, automatizacion CRM, seguimiento y workflows listos para IA.",
+      fileEn: "jacques-wainright-executive-operations-crm-automation-resume-en.pdf",
+      fileFr: "jacques-wainright-executive-operations-crm-automation-resume-fr.pdf",
+      fileEs: "jacques-wainright-executive-operations-crm-automation-resume-es.pdf"
     }
   ];
 
